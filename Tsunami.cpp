@@ -42,16 +42,15 @@ uint8_t txbuf[5];
 void Tsunami::flush(void) {
 
 int i;
-uint8_t dat;
 
 	rxCount = 0;
 	rxLen = 0;
 	rxMsgReady = false;
 	for (i = 0; i < MAX_NUM_VOICES; i++) {
-	  voiceTable[i] = 0xffff;
+		voiceTable[i] = 0xffff;
 	}
 	while(TsunamiSerial.available())
-		dat = TsunamiSerial.read();
+		i = TsunamiSerial.read();
 }
 
 

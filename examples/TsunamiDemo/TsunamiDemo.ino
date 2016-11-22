@@ -7,6 +7,10 @@
 //
 //  Programmers: Jamie Robertson, info@robertsonics.com
 //
+//  WARNING: The Tsunami is a 3.3V device. Attempting to connect it to a 5V
+//   Arduino (such as an UNO) without level-shifters, will likely damage your
+//   Tsunami!
+//
 // ****************************************************************************
 //
 // To use this sketch with an Arduino, you'll need:
@@ -22,9 +26,10 @@
 //    RXn  <------> TX
 //
 //    If you're using an Arduino with at least one extra hardware serial port,
-//    such as an Mega or Teensy, the Tsunami library is already set to use
-//    Serial1. If you need to change that, or want to use AltSoftSerial, you'll
-//    need to edit the Tsunami.h file, according the instructions in that file.
+//    such as an M0 or Teensy, the Tsunami library is already set to use
+//    Serial1. If you need to change that, or want to use AltSoftSerial, you
+//    must make a small edit the Tsunami.h file, according the instructions in
+//    that file.
 //
 // 4) Download and install the demo wav files onto the Tsunami's microSD
 //    card. You can find them here:
