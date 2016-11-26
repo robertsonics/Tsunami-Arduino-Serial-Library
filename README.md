@@ -62,6 +62,22 @@ Tsunami tsunami;
 **tsunami.getNumTracks()** - Returns number of tracks on Tsunami's microSD card
   This function requires bi-directional communication with Tsunami.
 
+**tsunami.setReporting(bool enable)** - this function enables (TRUE) or disables
+  (FALSE) track reporting. When enabled, the Tsunami will send a message whenever
+  a track starts or ends, specifying the track number. Provided you call update()
+  periodically, the library will use these messages to maintain status of all tracks,
+  allowing you to query if particular tracks are playing or not.
+  
+**tsunami.update()** - this function should be called periodically when reporting is
+  enabled. Doing so will process any incoming serial messages and keep the track status
+  up to date.
+
+**tsunami.isTrackPlaying(int trk)** - If reporting has been enabled, this function can be
+  used to determine if a particular track is currently playing.
+
+**tsunami.flush()** - This function clears Tsunami's communication buffer and resets
+  the local track status info.
+
 **tsunami.masterGain(int out, int gain)** - this function immediately sets the gain of the
   specific stereo output to the specified value. The range for gain is -70 to +4. If
   audio is playing, you will hear the result immediately. If audio is not playing,
@@ -137,22 +153,6 @@ Tsunami tsunami;
   volume will transition smoothly from the current value to the target gain in the
   specified number of milliseconds. If the stopFlag is non-zero, the track will be
   stopped at the completion of the fade (for fade-outs.)
-  
-**tsunami.setReporting(bool enable)** - this function enables (TRUE) or disables
-  (FALSE) track reporting. When enabled, the Tsunami will send a message whenever
-  a track starts or ends, specifying the track number. Provided you call update()
-  periodically, the library will use these messages to maintain status of all tracks,
-  allowing you to query if particular tracks are playing or not.
-  
-**tsunami.update()** - this function should be called periodically when reporting is
-  enabled. Doing so will process any incoming serial messages and keep the track status
-  up to date.
-
-**tsunami.isTrackPlaying(int trk)** - If reporting has been enabled, this function can be
-  used to determine if a particular track is currently playing.
-
-**tsunami.flush()** - This function clears Tsunami's communication buffer and resets
-  the local track status info.
 
 
 
