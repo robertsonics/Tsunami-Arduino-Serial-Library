@@ -10,7 +10,7 @@ a level shifter.
 The library assumes that you are using an Arduino with at least one extra hardware
 serial port, such as an Teensy or M0, and by default uses Serial1. If you need to
 change this, or wish to use AltSoftSerial, you'll need to make one small change to
-the library's **Tsunami.h file**. Near the top of the file, look for:
+the library's **Tsunami.h** file. Near the top of the file, look for:
 
 ```
 // ==================================================================
@@ -46,8 +46,8 @@ http://robertsonics.com/2015/04/25/arduino-serial-control-tutorial/
 Usage:
 ======
 
-In all cases below, the range for t (track number) is 1 through 4096, the range
-for out (output number) is 1 through 4.
+In all cases below, the range for **t** (track number) is 1 through 4096, the range
+for **out** (output number) is 1 through 4.
 
 Tsunami tsunami;
 
@@ -67,8 +67,8 @@ Tsunami tsunami;
   audio is playing, you will hear the result immediately. If audio is not playing,
   the new gain will be used the next time a track is started.
 
-**tsunami.samplerateOffset(int out, int offset)** - this function immediately sets sample-
-  rate offset, or playback speed / pitch, of the specified stereo output. The range for
+**tsunami.samplerateOffset(int out, int offset)** - this function immediately sets sample-rate offset,
+  or playback speed / pitch, of the specified stereo output. The range for
   for the offset is -32767 to +32676, giving a speed range of 1/2x to 2x, or a
   pitch range of down one octave to up one octave. If audio is playing, you will
   hear the result immediately. If audio is not playing, the new sample-rate offset
@@ -123,8 +123,7 @@ Tsunami tsunami;
   Because the effect is immediate, large changes can produce ubrupt results. If
   you want to fade in or fade out a track, send small changes spaced out at regular
   intervals. Increment or decrementing by 1 every 20 to 50 msecs produces nice
-  smooth fades. Better yet, use the new trackFade() and trackCrossFade() commands
-  below.
+  smooth fades. Better yet, use the trackFade() function below.
   
 **tsunami.stopAllTracks()** - this commands stops any and all tracks that are currently
   playing.
