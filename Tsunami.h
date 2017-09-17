@@ -7,18 +7,11 @@
 // Programmers: Jamie Robertson, info@robertsonics.com
 //
 // **************************************************************
-//
-// Revision History
-//
-// Date      Description
-// --------  -----------
-//
-// 10/15/16  First version created.
 
 #ifndef _20161015_TSUNAMI_H_
 #define _20161015_TSUNAMI_H_
 
-#define TSUNAMI_NUM_OUTPUTS	4
+#define TSUNAMI_NUM_OUTPUTS	8
 
 // ==================================================================
 // The following defines are used to control which serial class is
@@ -40,6 +33,7 @@
 #define CMD_RESUME_ALL_SYNC			11
 #define CMD_SAMPLERATE_OFFSET		12
 #define	CMD_SET_REPORTING			13
+#define CMD_SET_TRIGGER_BANK		14
 
 #define TRK_PLAY_SOLO				0
 #define TRK_PLAY_POLY				1
@@ -110,6 +104,7 @@ public:
 	void trackGain(int trk, int gain);
 	void trackFade(int trk, int gain, int time, bool stopFlag);
 	void samplerateOffset(int out, int offset);
+	void setTriggerBank(int bank);
 
 private:
 	void trackControl(int trk, int code, int out, int flags);

@@ -68,6 +68,11 @@ Tsunami tsunami;
   periodically, the library will use these messages to maintain status of all tracks,
   allowing you to query if particular tracks are playing or not.
   
+**tsunami.setTriggerBank(int bank)** - this function sets the trigger bank. The bank
+  range is 1 - 32. Each bank will offset the normal trigger function track assignment
+  by 16. For bank 1, the default, trigger one maps to track 1. For bank 2, trigger 1
+  maps to track 17, trigger 2 to track 18, and so on.
+  
 **tsunami.update()** - this function should be called periodically when reporting is
   enabled. Doing so will process any incoming serial messages and keep the track status
   up to date.
