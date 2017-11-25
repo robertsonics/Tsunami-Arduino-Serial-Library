@@ -47,7 +47,8 @@ Usage:
 ======
 
 In all cases below, the range for **t** (track number) is 1 through 4096, the range
-for **out** (output number) is 1 through 4.
+for **out** (output number) is 1 through 4 for the stereo firmware, and 1 through 8
+for the mono firmware.
 
 Tsunami tsunami;
 
