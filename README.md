@@ -159,6 +159,15 @@ Tsunami tsunami;
   specified number of milliseconds. If the stopFlag is non-zero, the track will be
   stopped at the completion of the fade (for fade-outs.)
 
+**tsunami.setInputMix(int mix)** - this function controls the routing of the audio input
+  channels. For bits 1 through 4, a "1" causes the 2 input channels to be mixed into
+  the corresponding output pair. As an example, to route the audio input to output pairs
+  1, 2 and 4, the syntax is: setInputMix(IMIX_OUT1 | IMIX_OUT2 | IMIX_OUT4); The routing
+  is immediate and does no ramping, so to avoid pops, be sure that the input is quiet
+  when switching.
+  
+
+
 
 
   
