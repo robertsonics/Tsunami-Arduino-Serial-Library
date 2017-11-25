@@ -34,6 +34,7 @@
 #define CMD_SAMPLERATE_OFFSET		12
 #define	CMD_SET_REPORTING			13
 #define CMD_SET_TRIGGER_BANK		14
+#define CMD_SET_INPUT_MIX			15
 
 #define TRK_PLAY_SOLO				0
 #define TRK_PLAY_POLY				1
@@ -56,6 +57,11 @@
 #define SOM1	0xf0
 #define SOM2	0xaa
 #define EOM		0x55
+
+#define IMIX_OUT1	0x01
+#define IMIX_OUT2	0x02
+#define IMIX_OUT3	0x04
+#define IMIX_OUT4	0x08
 
 
 #ifdef __TSUNAMI_USE_ALTSOFTSERIAL__
@@ -105,6 +111,7 @@ public:
 	void trackFade(int trk, int gain, int time, bool stopFlag);
 	void samplerateOffset(int out, int offset);
 	void setTriggerBank(int bank);
+	void setInputMix(int mix);
 
 private:
 	void trackControl(int trk, int code, int out, int flags);
