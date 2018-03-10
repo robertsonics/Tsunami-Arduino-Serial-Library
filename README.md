@@ -166,6 +166,13 @@ Tsunami tsunami;
   1, 2 and 4, the syntax is: setInputMix(IMIX_OUT1 | IMIX_OUT2 | IMIX_OUT4); The routing
   is immediate and does no ramping, so to avoid pops, be sure that the input is quiet
   when switching.
+
+**tsunami.setMidiBank(int bank)** - this function sets the MIDI bank. The bank range
+  is 1 - 32. Each bank will offset the MIDI Note number to track assignment by 128.
+  For bank 1, the default, MIDI Note number maps to track 1. For bank 2, MIDI Note
+  number 1 maps to track 129, MIDI Note number 2 to track 130, and so on.
+  
+
   
 
 
