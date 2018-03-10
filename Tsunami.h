@@ -35,6 +35,7 @@
 #define	CMD_SET_REPORTING			13
 #define CMD_SET_TRIGGER_BANK		14
 #define CMD_SET_INPUT_MIX			15
+#define CMD_SET_TRIGGER_BANK		16
 
 #define TRK_PLAY_SOLO				0
 #define TRK_PLAY_POLY				1
@@ -112,6 +113,7 @@ public:
 	void samplerateOffset(int out, int offset);
 	void setTriggerBank(int bank);
 	void setInputMix(int mix);
+	void setMidiBank(int bank);
 
 private:
 	void trackControl(int trk, int code, int out, int flags);

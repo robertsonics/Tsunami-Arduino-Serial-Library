@@ -425,5 +425,19 @@ void Tsunami::setInputMix(int mix) {
 	TsunamiSerial.write(txbuf, 6);
 }
 
+// **************************************************************
+void Tsunami::setMidiBank(int bank) {
+
+	uint8_t txbuf[6];
+
+	txbuf[0] = SOM1;
+	txbuf[1] = SOM2;
+	txbuf[2] = 0x06;
+	txbuf[3] = CMD_SET_MIDI_BANK;
+	txbuf[4] = (uint8_t)bank;
+	txbuf[5] = EOM;
+	TsunamiSerial.write(txbuf, 6);
+}
+
 
 
