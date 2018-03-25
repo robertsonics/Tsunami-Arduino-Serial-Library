@@ -35,7 +35,7 @@
 #define	CMD_SET_REPORTING			13
 #define CMD_SET_TRIGGER_BANK		14
 #define CMD_SET_INPUT_MIX			15
-#define CMD_SET_TRIGGER_BANK		16
+#define CMD_SET_MIDI_BANK			16
 
 #define TRK_PLAY_SOLO				0
 #define TRK_PLAY_POLY				1
