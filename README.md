@@ -171,6 +171,11 @@ Tsunami tsunami;
   is 1 - 32. Each bank will offset the MIDI Note number to track assignment by 128.
   For bank 1, the default, MIDI Note number maps to track 1. For bank 2, MIDI Note
   number 1 maps to track 129, MIDI Note number 2 to track 130, and so on.
+
+**tsunami.setTriggerBank(int bank)** - this function sets the trigger bank. The bank
+  range is 1 - 32. Each bank will offset the trigger to track assignment by 16. For
+  bank 1, the default, trigger 1 maps to track 1. For bank 2, trigger 1 maps to track
+  17, trigger 2 to track 18, and so on.
   
 
   
