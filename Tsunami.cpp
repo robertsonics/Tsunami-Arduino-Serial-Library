@@ -384,7 +384,7 @@ uint8_t txbuf[8];
 unsigned short off;
 uint8_t o;
 
-	o = out & 0x03;
+	o = out & 0x07;
 	txbuf[0] = SOM1;
 	txbuf[1] = SOM2;
 	txbuf[2] = 0x08;
