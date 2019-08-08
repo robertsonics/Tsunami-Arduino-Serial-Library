@@ -53,7 +53,7 @@
 
 #define MAX_MESSAGE_LEN				32
 #define MAX_NUM_VOICES				18
-#define VERSION_STRING_LEN			22
+#define VERSION_STRING_LEN			23
 
 #define SOM1	0xf0
 #define SOM2	0xaa
