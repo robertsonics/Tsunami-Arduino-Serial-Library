@@ -41,7 +41,7 @@ changes more frequently than if you are playing 12 tracks at a time.
 The library includes example sketches that demonstrate many of the library
 commands with a set of demo tracks which you can download from
 
-http://robertsonics.com/2015/04/25/arduino-serial-control-tutorial/
+[https://www.robertsonics.com/blog/2015/04/25/arduino-serial-control-tutorial]
 
 Usage:
 ======
