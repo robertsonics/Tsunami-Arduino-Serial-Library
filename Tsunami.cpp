@@ -194,6 +194,23 @@ uint8_t o;
 }
 
 // **************************************************************
+void Tsunami::inputGain(int gain) {
+
+	uint8_t txbuf[8];
+	unsigned short vol;
+
+	txbuf[0] = SOM1;
+	txbuf[1] = SOM2;
+	txbuf[2] = 0x07;
+	txbuf[3] = CMD_MASTER_VOLUME;
+	vol = (unsigned short)gain;
+	txbuf[4] = (uint8_t)vol;
+	txbuf[5] = (uint8_t)(vol >> 8);
+	txbuf[6] = EOM;
+	TsunamiSerial.write(txbuf, 7);
+}
+
+// **************************************************************
 void Tsunami::setReporting(bool enable) {
 
 uint8_t txbuf[6];

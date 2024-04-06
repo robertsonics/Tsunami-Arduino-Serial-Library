@@ -36,6 +36,7 @@
 #define CMD_SET_TRIGGER_BANK		14
 #define CMD_SET_INPUT_MIX			15
 #define CMD_SET_MIDI_BANK			16
+#define CMD_INPUT_GAIN				18
 
 #define TRK_PLAY_SOLO				0
 #define TRK_PLAY_POLY				1
@@ -99,6 +100,7 @@ public:
 	int getNumTracks(void);
 	bool isTrackPlaying(int trk);
 	void masterGain(int out, int gain);
+	void inputGain(int gain);
 	void stopAllTracks(void);
 	void resumeAllInSync(void);
 	void trackPlaySolo(int trk, int out, bool lock);

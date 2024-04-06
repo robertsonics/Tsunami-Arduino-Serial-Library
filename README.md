@@ -89,6 +89,10 @@ Tsunami tsunami;
   audio is playing, you will hear the result immediately. If audio is not playing,
   the new gain will be used the next time a track is started.
 
+**tsunami.inputGain(int gain)** - this function immediately sets the gain of the
+  stereo input to the specified value. The range for gain is -70 to +4. If audio
+  audio is playing, you will hear the result immediately.
+
 **tsunami.samplerateOffset(int out, int offset)** - this function immediately sets sample-rate offset,
   or playback speed / pitch, of the specified stereo output. The range for
   for the offset is -32767 to +32676, giving a speed range of 1/2x to 2x, or a
