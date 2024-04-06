@@ -202,7 +202,7 @@ void Tsunami::inputGain(int gain) {
 	txbuf[0] = SOM1;
 	txbuf[1] = SOM2;
 	txbuf[2] = 0x07;
-	txbuf[3] = CMD_MASTER_VOLUME;
+	txbuf[3] = CMD_INPUT_GAIN;
 	vol = (unsigned short)gain;
 	txbuf[4] = (uint8_t)vol;
 	txbuf[5] = (uint8_t)(vol >> 8);
